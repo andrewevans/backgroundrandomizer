@@ -57,3 +57,4 @@ var timer_id = window.setInterval(function() {
     document.body.style.backgroundColor = rgb; // Set background color
 
 }, time_per_interval);
+
