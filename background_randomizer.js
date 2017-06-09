@@ -14,9 +14,9 @@ if (testing) {
 function calc_color() {
     var r, g, b, rgb;
 
-    r = parseInt(Math.random() * 255);
-    g = parseInt(Math.random() * 255);
-    b = parseInt(Math.random() * 255);
+    r = parseInt(Math.floor(Math.random() * (255 + 1)));
+    g = parseInt(Math.floor(Math.random() * (255 + 1)));
+    b = parseInt(Math.floor(Math.random() * (255 + 1)));
 
     if (testing) {
         r = Math.floor((r) / 50) * 50;
