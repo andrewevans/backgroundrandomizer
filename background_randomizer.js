@@ -1,3 +1,4 @@
+(function () {
 var time_elapsed = 0,
     colors_used = [],
     time_per_interval = 1000,
@@ -57,4 +58,4 @@ var timer_id = window.setInterval(function() {
     document.body.style.backgroundColor = rgb; // Set background color
 
 }, time_per_interval);
-
+} ());
