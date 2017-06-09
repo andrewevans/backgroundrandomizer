@@ -1,6 +1,6 @@
 (function () {
 var time_elapsed = 0,
-    colors_used = [],
+    colors_used = new Map(),
     time_per_interval = 1000,
     total_time = 10000,
     testing = false,
@@ -50,10 +50,10 @@ var timer_id = window.setInterval(function() {
             window.console.log("Try again, already used color.");
         }
         rgb = calc_color();
-    } while (colors_used.indexOf(rgb) !== -1);
+    } while (colors_used.has(rgb));
 
   found_unique++;
-    colors_used.push(rgb); // Add color to list of colors used
+    colors_used.set(rgb, true); // Add color to list of colors used
 
     document.body.style.backgroundColor = rgb; // Set background color
 
